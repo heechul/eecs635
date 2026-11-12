@@ -1,0 +1,98 @@
+{
+  "architecture": {
+    "backbone": "MobileNetV2",
+    "alpha": 0.35,
+    "cut_point": "block_6_expand_relu",
+    "weights": "random",
+    "batch_norm_momentum": 0.9,
+    "parameters": 20853,
+    "tflite_operators": [
+      "ADD",
+      "CONV_2D",
+      "DEPTHWISE_CONV_2D",
+      "SOFTMAX"
+    ]
+  },
+  "model_bytes": {
+    "float32": 84564,
+    "int8": 56328
+  },
+  "dataset": "synthetic cubes v1",
+  "seeds": {
+    "train": 100,
+    "validation": 200,
+    "test": 300
+  },
+  "split_sizes": {
+    "train": 1200,
+    "validation": 240,
+    "test": 240
+  },
+  "threshold": 0.6,
+  "matching_radius_pixels": 8,
+  "epochs_run": 35,
+  "float32": {
+    "tp": 601,
+    "fp": 0,
+    "fn": 0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "exact_class_counts": 1.0,
+    "mean_absolute_class_count_error": 0.0,
+    "per_class": {
+      "blue": {
+        "tp": 144,
+        "fp": 0,
+        "fn": 0
+      },
+      "green": {
+        "tp": 141,
+        "fp": 0,
+        "fn": 0
+      },
+      "red": {
+        "tp": 170,
+        "fp": 0,
+        "fn": 0
+      },
+      "yellow": {
+        "tp": 146,
+        "fp": 0,
+        "fn": 0
+      }
+    }
+  },
+  "int8": {
+    "tp": 601,
+    "fp": 1,
+    "fn": 0,
+    "precision": 0.9983388704318937,
+    "recall": 1.0,
+    "f1": 0.9991687448046551,
+    "exact_class_counts": 0.9958333333333333,
+    "mean_absolute_class_count_error": 0.004166666666666667,
+    "per_class": {
+      "blue": {
+        "tp": 144,
+        "fp": 0,
+        "fn": 0
+      },
+      "green": {
+        "tp": 141,
+        "fp": 0,
+        "fn": 0
+      },
+      "red": {
+        "tp": 170,
+        "fp": 0,
+        "fn": 0
+      },
+      "yellow": {
+        "tp": 146,
+        "fp": 1,
+        "fn": 0
+      }
+    }
+  }
+}

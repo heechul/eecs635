@@ -1,0 +1,10 @@
+# Python 3.12. Set TF_USE_LEGACY_KERAS=1 before importing TensorFlow.
+tensorflow==2.19.1
+tf-keras==2.19.0
+numpy>=1.26,<2
+pillow>=10,<12
+matplotlib>=3.8,<4
+jupyterlab
+ipykernel
+nbformat
+nbclient

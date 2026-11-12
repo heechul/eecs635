@@ -1,0 +1,16 @@
+# Python 3.12; TensorFlow with legacy Keras for reliable TFLite export.
+tensorflow==2.19.1
+# tensorflow-metal # uncomment this to enable gpu on Apple Silicon
+tf-keras==2.19.0
+numpy>=1.26,<2
+scipy
+kagglehub
+matplotlib
+librosa>=0.11,<1
+python_speech_features
+ffmpeg-python
+sounddevice
+jupyterlab
+ipykernel
+nbformat
+nbclient

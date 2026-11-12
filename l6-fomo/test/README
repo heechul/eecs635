@@ -1,0 +1,12 @@
+FOMO host tests
+
+Run from the project root after notebook export:
+  .venv/bin/python -m unittest discover -s test -p 'test_*.py' -v
+
+Requires a host C++ compiler and requirements-local.txt. Tests compile fomo_host.cpp
+in a temporary directory, then compare the actual firmware decoder/preprocessor
+with the notebook's Python implementation. Also verifies exported model bytes,
+int8 tensor contracts, supported operators, and the static inference fixture.
+
+Compile the camera and static firmware environments with PlatformIO. Use the
+static image on hardware to validate TFLite Micro against static-expected.json.
